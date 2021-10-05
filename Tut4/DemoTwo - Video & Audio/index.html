@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myCanvas{
+            border:1px solid #d3d3d3;
+        }
+    </style>
+</head>
+
+<body>
+    <video src="nani.mp4" width="640" height="480" poster="highlight_still.jpg" controls autoplay>
+        Your browser does not support HTML5 video. Get the <a href="highlight_reel.mp4">MP4 video</a>
+    </video>
+    <video id="video" controls poster="img/poster.jpg">
+        <source src="clip.webm" type="video/webm">
+        <source src="clip.mp4" type="video/mp4">
+        <source src="clip.ogg" type="video/ogg">
+        Your browser does not support HTML5 video.
+    </video>;
+    <audio id="whiterabbits" controls preload="auto">
+        <source src="percussiongun.mp3" type="audio/mp3">
+        <source src="percussiongun.ogg" type="audio/ogg">
+        <source src="percussiongun.webm" type="audio/webm">
+        Your browser does not support HTML5 audio.
+    </audio>
+    <canvas id="myCanvas" width="200" height="100">
+        Your browser does not support the HTML canvas tag.</canvas>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+    </script>
+</body>
+
+</html>
